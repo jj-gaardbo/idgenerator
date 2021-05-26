@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <title>ID generator</title>
+</head>
+<body>
+    <div class="container-fluid main-wrapper">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1>
+                    Generate an ID by filling out this form.
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-4">
+                <form id="uniqueID">
+                    <div class="form-group">
+                        <label for="letter">Enter a single random letter from the english alphabet</label>
+                        <input type="text" class="form-control" id="letter" maxlength="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="number">Enter a random number between 1-1000</label>
+                        <input type="number" min="0" max="1000" class="form-control" id="number">
+                    </div>
+                    <div class="form-group">
+                        <label for="color">Enter a random color (Keep it english)</label>
+                        <input type="text" class="form-control" id="color">
+                    </div>
+                    <div class="form-group">
+                        <label for="animal">Enter a random animal (Keep it english)</label>
+                        <input type="text" class="form-control" id="animal">
+                    </div>
+                    <button type="button" id="generateID" class="btn btn-primary">Generate ID</button>
+                </form>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-5 result hidden">
+                <div class="row">
+                    <div class="col-12 result-style">
+                        <div class="instruction">
+                            <h2><b>You need to remember this ID!</b></h2>
+                            <h4>Click the button below to copy your ID to the clipboard, <br> and save it somewhere, so you can find it later</h4>
+                        </div>
+                        <div id="result">
+                            <button class="btn btn-primary" id="generatedID"></button>
+                            <h4>You can also directly download your ID into a .txt file here</h4>
+                            <a id="export" href="#">
+                                <button class="btn btn-warning">Export to txt</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row hidden feedback-wrapper">
+                    <div class="col-12">
+                        <span id="feedback">Your ID has been copied to your clipboard!</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </div>
+</body>
+</html>
